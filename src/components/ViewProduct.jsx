@@ -33,9 +33,9 @@ const ViewProduct = () => {
         {state.item.length === 0 ? (
           <div></div>
         ) : (
-          <div className="bg-white relative grid grid-cols-12 rounded-xl w-[90%]">
+          <div className="bg-white relative grid grid-cols-12 rounded-xl gap-10 ">
             <img src={`${Item.url}585x585.jpg`} className='col-span-12 md:col-span-6 my-auto' alt="" />
-            <div className="bg-slate-400 my-auto col-span-12 md:col-span-6">
+            <div className="my-auto col-span-12 md:col-span-6">
               <h2 className="text-2xl font-semibold pb-5">{Item.title}</h2>
               <h2 className="text-3xl font-semibold text-gray-400">
                 ${Item.price}.00
