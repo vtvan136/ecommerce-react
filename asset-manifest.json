@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ecommerce-react/static/css/main.43e99f95.css",
-    "main.js": "/ecommerce-react/static/js/main.bfb4c44c.js",
+    "main.css": "/ecommerce-react/static/css/main.4dc87288.css",
+    "main.js": "/ecommerce-react/static/js/main.3e3fa793.js",
     "index.html": "/ecommerce-react/index.html",
-    "main.43e99f95.css.map": "/ecommerce-react/static/css/main.43e99f95.css.map",
-    "main.bfb4c44c.js.map": "/ecommerce-react/static/js/main.bfb4c44c.js.map"
+    "main.4dc87288.css.map": "/ecommerce-react/static/css/main.4dc87288.css.map",
+    "main.3e3fa793.js.map": "/ecommerce-react/static/js/main.3e3fa793.js.map"
   },
   "entrypoints": [
-    "static/css/main.43e99f95.css",
-    "static/js/main.bfb4c44c.js"
+    "static/css/main.4dc87288.css",
+    "static/js/main.3e3fa793.js"
   ]
 }
