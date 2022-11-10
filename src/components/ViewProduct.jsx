@@ -27,29 +27,29 @@ const ViewProduct = () => {
     <>
       <div
         id="product"
-        className="bg-black/50 fixed z-[200]  w-full top-0 left-0 justify-center items-center m-auto pt-[90px] h-screen hidden"
+        className="bg-black/50 fixed z-[200]  w-full top-0 left-0 justify-center items-center m-auto pt-[90px] h-full hidden"
       >
         {" "}
         {state.item.length === 0 ? (
           <div></div>
         ) : (
           <div className="bg-white relative grid grid-cols-12 rounded-xl gap-10 ">
-            <img src={`${Item.url}585x585.jpg`} className='col-span-12 md:col-span-6 my-auto' alt="" />
-            <div className="my-auto col-span-12 md:col-span-6">
-              <h2 className="text-2xl font-semibold pb-5">{Item.title}</h2>
-              <h2 className="text-3xl font-semibold text-gray-400">
+            <img src={`${Item.url}585x585.jpg`} className='col-span-12 md:col-span-6 my-auto w-full' alt="" />
+            <div className="my-auto col-span-12 md:col-span-6 w-full p-5">
+              <h2 className="text-lg md:text-2xl font-semibold pb-5 mx-4">{Item.title}</h2>
+              <h2 className="text-3xl font-semibold text-gray-400 mx-4">
                 ${Item.price}.00
               </h2>
-              <h3 className="font-bold text-base pt-8 pb-5">
+              <h3 className="font-bold text-base pt-8 pb-5 mx-4">
                 Available:{" "}
-                <span className="text-green-600 font-bold">in-stock</span>
+                <span className="text-green-600 font-bold ">in-stock</span>
               </h3>
-              <p className="">
+              <p className="mx-4">
                 At vero accusamus et iusto odio dignissimos blanditiis
                 praesentiums dolores molest.
               </p>
-              <div className="flex gap-5 pt-6">
-                <div className="inline-flex border-2 py-2 px-3 border-gray-500 border-solid rounded-3xl">
+              <div className="flex gap-5 pt-6 mx-4">
+                <div className="border-2 py-2 px-4 border-gray-500 border-solid rounded-3xl">
                   <button
                     onClick={() => {
                       if (quantity > 1) {
@@ -87,6 +87,7 @@ const ViewProduct = () => {
                           id_cart: Date.now(),
                         }),
                       });
+                      closeProduct()
                     } else {
                       alert("You need to login");
                     }
@@ -115,19 +116,19 @@ const ViewProduct = () => {
                   <IoHeartOutline className="" size={20} />
                 </button>
               </div>
-              <h3 className="font-semibold text-base pt-8">
+              <h3 className="font-semibold text-base pt-8 mx-4">
                 SKU:{" "}
                 <span className="text-base font-semibold text-gray-500">
                   {Item.sku}
                 </span>
               </h3>
-              <h3 className="font-semibold text-base pt-4">
+              <h3 className="font-semibold text-base pt-4 mx-4">
                 Categories:{" "}
                 <span className="text-base font-semibold text-gray-500">
                   {Item.category}
                 </span>
               </h3>
-              <h3 className="font-semibold text-base pt-4">
+              <h3 className="font-semibold text-base pt-4 mx-4">
                 Tags:{" "}
                 <span className="text-base font-semibold text-gray-500">
                   {Item.tag}
@@ -135,7 +136,7 @@ const ViewProduct = () => {
               </h3>
               <button
                 onClick={closeProduct}
-                className="absolute top-0 right-0 px-8 py-5 hover:text-yellow-500"
+                className="absolute top-0 right-0 px-5 py-5 m-5 hover:text-yellow-500"
               >
                 <IoCloseOutline size={30} />{" "}
               </button>

@@ -51,19 +51,20 @@ const Header = () => {
           {!user?.email ? (
             <Link to={"/auth"}>
               {" "}
-              <AiOutlineUser className="mr-7 hover:text-amber-500" size={26} />
+              <AiOutlineUser onClick={()=> setMenu('hidden')} className="md:mr-7 hover:text-amber-500 mx-auto" size={26} /> <h1 className="block md:hidden">Sigin or Register</h1>
             </Link>
           ) : (
+            <>
             <AiOutlineLogout
               onClick={handleLogout}
-              className="mr-7 hover:text-amber-500"
+              className="mx-auto md:mr-7 hover:text-amber-500"
               size={26}
-            />
+            /></>
           )}
           
           <div onClick={()=> setMenu('hidden')} className="relative h-9">
             <Link to={"/wish-list"}>
-              <IoHeartOutline className="mr-7 hover:text-amber-500" size={26} />
+              <IoHeartOutline className="mx-auto md:mr-7 hover:text-amber-500" size={26} /><h1 className="block md:hidden">Wish</h1>
             </Link>
             <div className="bg-amber-500 text-black h-5 w-5 rounded-[50%] box-border items-center flex justify-center text-center absolute left-5 -top-3 text-xs font-medium">
               {wish ? `${wish.length}` : 0}
@@ -72,9 +73,9 @@ const Header = () => {
           <div  onClick={()=> setMenu('hidden')} className="relative h-9">
             <Link to={"/cart"}>
               <AiOutlineShopping
-                className="mr-7 hover:text-amber-500"
+                className="mx-auto md:mr-7 hover:text-amber-500"
                 size={28}
-              />
+              /> <h1 className="block md:hidden">Cart</h1>
             </Link>
             <div className="bg-amber-500 text-black h-5 w-5 rounded-[50%] box-border flex justify-center items-center text-center absolute left-5 -top-3 text-xs font-medium">
               {cart ? `${cart.length}` : 0}
